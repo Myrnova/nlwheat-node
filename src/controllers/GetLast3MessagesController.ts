@@ -6,14 +6,10 @@ class GetLast3MessagesController {
     
     async handle(request: Request, response: Response) {
 
-        const { message } = request.body
-
-        const { user_id } = request;
-
         const service = new GetLast3MessagesService();
         
         try {
-            const result = await service.execute(message, user_id)
+            const result = await service.execute()
 
             return response.json(result)
         }

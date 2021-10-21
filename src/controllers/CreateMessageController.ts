@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import { CreateMessageService } from '../services/CreateMessageService'
-import { io } from '../app'
+
 
 class CreateMessageController {
     
@@ -14,6 +14,7 @@ class CreateMessageController {
         
         try {
             const result = await service.execute(message, user_id)
+
             return response.json(result)
         }
         catch(err: any) {
