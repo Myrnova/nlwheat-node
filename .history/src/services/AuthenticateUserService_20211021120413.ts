@@ -1,0 +1,6 @@
+class AuthenticateUserService {
+
+}
+
+
+export {AuthenticateUserService }
